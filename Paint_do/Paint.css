@@ -1,0 +1,89 @@
+﻿body {
+    background: white;
+}
+
+.Toolbar {
+    float: left;
+    font-family: 'Trebuchet MS';
+    font-size: 14px;
+    font-variant: small-caps;
+    text-align: center;
+    background: #F2F7FE;
+    padding: 10px 15px 3px 10px;
+    margin-bottom: 1px;
+    margin-right: 1px;
+    border: 1px solid #7B899B;
+    height:70px;
+}
+
+.Toolbar button {
+    padding: 6px;
+    margin: 7px 2px;
+    font-variant: normal;
+    font-size: 12px;
+}
+
+.CanvasContainer {
+    clear: both;
+}
+
+canvas {
+    border: 1px solid #7B899B;
+}
+
+img {
+    padding: 2px;
+    border: 2px solid #F2F7FE;
+}
+
+img:hover {
+    border: 2px groove #E4F0FE;
+    background: white;
+}
+
+img.Selected {
+    border: 2px groove #E4F0FE;
+}
+
+#savedCopyContainer {
+    display: none;
+}
+
+#savedCopyContainer img {
+    width: 250px;
+    height: 150px;
+}
+
+.option {
+    float: left;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #cccccc;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+.option1 {
+    float: left;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #cccccc;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+#aaa .Selected {
+    border: 2px solid black;
+}
+
+#ucolor .Selected,#ufill .Selected{
+    border: 2px solid black;
+}
+
+
+#container { position: relative; }
+#drawingCanvas { border: 1px solid #000;  top: 94px; left: 8px; }
+#imageTemp { position: absolute;  top: 94px; left: 8px;}
+
+
+

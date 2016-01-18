@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Paint</title>
+    <link rel="stylesheet" href="Paint.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="Paint.js"></script>
+</head>
+
+<body>
+    <div class="Toolbar">
+        - Draw Tools -
+        <br>
+        <img src="pen_green.gif" title="Pencel" width="33" height="33" id="greenPen" onclick="changeType('pen', this)">
+        <img src="line.png"  title="Draw Line" width="33" height="33" id="bluePen" onclick="changeType('line', this)">
+        <img src="shape_square.png"  title="Draw Square" width="33" height="33" onclick="changeType('square', this)">
+        <img src="circle.png"  title="Thick Pen" width="33" height="33" onclick="changeType('circle', this)">
+        <img src="A.png" id="showtext"  title="Draw Text" width="33" height="33" onclick="changeType('text', this)">
+    </div>
+    <div class="Toolbar">
+        - Pen Thickness -
+        <br>
+        <img src="pen_thin.gif" title="Thin" width="33" height="33" onclick="changeThickness(1, this)">
+        <img src="pen_medium.gif" title="Medium" width="33" height="33" onclick="changeThickness(5, this)">
+        <img src="pen_thick.gif" title="Thick" width="33" height="33" onclick="changeThickness(10, this)">
+    </div>
+    <div class="Toolbar" id="ucolor">
+        <div class="option1" id="curcolor"  style="background:black" onclick="clickFill(this,'color')"></div>
+        <br> Color
+    </div>
+    <div class="Toolbar" id="ufill">
+        <div class="option1" id="curfill" style="background:white" onclick="clickFill(this,'fill')"></div>
+        <br> <span id="filltitle">Fill</span>
+    </div>
+    <div class="Toolbar">
+        - Pick Color -
+        <br />
+        <br />
+        <div id="aaa">
+            <div class="option"  style="background:red" onclick="clickColorBox(this)"></div>
+            <div class="option"  style="background:orange" onclick="clickColorBox(this)"></div>
+            <div class="option"  style="background:yellow" onclick="clickColorBox(this)"></div>
+            <div class="option"  style="background:green" onclick="clickColorBox(this)"></div>
+            <div class="option"  style="background:blue" onclick="clickColorBox(this)"></div>
+            <div class="option"  style="background:indigo" onclick="clickColorBox(this)"></div>
+            <div class="option"  style="background:purple" onclick="clickColorBox(this)"></div>
+            <div class="option"  style="background:black" onclick="clickColorBox(this)"></div>
+            <div class="option"  style="background:white" onclick="clickColorBox(this)"></div>
+        </div>
+     
+    </div>
+    <div class="Toolbar">
+        <form name="abc">
+            <input type="color" id="pcolor" name="pcolor" value="#000000">
+        </form>
+        Select
+        <br> color
+    </div>
+    <div class="CanvasContainer">
+        <canvas id="drawingCanvas" width="895" height="300"></canvas>
+    </div>
+    <div class="Toolbar">
+        - Operations -
+        <br>
+        <button onclick="saveCanvas()">Save the Canvas</button>
+        <button onclick="clearCanvas()">Clear the Canvas</button>
+        <div id="savedCopyContainer">
+            <img id="savedImageCopy">
+            <br> Right-click to save ...
+        </div>
+    </div>
+    <div class="Toolbar">
+        - Input Text -
+        <br>
+        Text: <input type="text" id="text"  >
+        <br> 
+        Font(px): <input type="text" id="textsize" > 
+    </div>
+ 
+
+
+
+    
+
+
+</body>
+
+</html>
