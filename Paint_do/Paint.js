@@ -170,16 +170,17 @@ function clickFill(selectElement,nowselect) {
     if (nowselect=="color") {
         selectColorOrFill = "color";
     } else {
+        selectColorOrFill = "fill";
         if (isFill) {
             changePty.call(this, null,selectElement);
             isFill = false;
-            selectColorOrFill = "color";
+            //selectColorOrFill = "color";
             document.getElementById("filltitle").style.color = "black";
         } else {
             changePty.call(this, selectElement,null);
             context.fillStyle= document.getElementById("curfill").style.background;
             isFill = true;
-            selectColorOrFill = "fill";
+            //selectColorOrFill = "fill";
             document.getElementById("filltitle").style.color = "red";
         }
     }
